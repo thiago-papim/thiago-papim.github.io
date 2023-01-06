@@ -1,3 +1,11 @@
+const palavraAleatoria = ['caixa', 'saiba', 'vetor', 'exame', 'fosse', 'fauna', 'lugar', 'fonte', 'cioso'];
+
+function aleatorio(arr) {
+  return palavraAleatoria[~~(palavraAleatoria.length * Math.random())];
+}
+
+console.log(aleatorio(palavraAleatoria));
+
 const palavra = 'termo';
 
 const comoJogar = document.getElementById('info');
@@ -370,17 +378,17 @@ enter.addEventListener('click', function () {
     enter.style.display = 'none';
     enter2.style.display = 'block';
     t6.classList.add('oi');
-  }
-  const verdeAmarelo = arr1.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
-  for (let index = 0; index < arrTecla.length; index += 1) {
-    for (let i = 0; i < arr1.length; i += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === arr1[i].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = true;
+    const verdeAmarelo = arr1.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+    for (let index = 0; index < arrTecla.length; index += 1) {
+      for (let i = 0; i < arr1.length; i += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === arr1[i].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '0.5';
+        }
       }
-    }
-    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = false;
+      for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '1';
+        }
       }
     }
   }
@@ -399,17 +407,17 @@ enter2.addEventListener('click', function () {
     enter2.style.display = 'none';
     enter3.style.display = 'block';
     t11.classList.add('oi');
-  }
-  const verdeAmarelo = arr2.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
-  for (let index = 0; index < arrTecla.length; index += 1) {
-    for (let i = 0; i < arr2.length; i += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === arr2[i].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = true;
+    const verdeAmarelo = arr2.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+    for (let index = 0; index < arrTecla.length; index += 1) {
+      for (let i = 0; i < arr2.length; i += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === arr2[i].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '0.5';
+        }
       }
-    }
-    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = false;
+      for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '1';
+        }
       }
     }
   }
@@ -428,17 +436,17 @@ enter3.addEventListener('click', function () {
     enter3.style.display = 'none';
     enter4.style.display = 'block';
     t16.classList.add('oi');
-  }
-  const verdeAmarelo = arr3.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
-  for (let index = 0; index < arrTecla.length; index += 1) {
-    for (let i = 0; i < arr3.length; i += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === arr3[i].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = true;
+    const verdeAmarelo = arr3.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+    for (let index = 0; index < arrTecla.length; index += 1) {
+      for (let i = 0; i < arr3.length; i += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === arr3[i].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '0.5';
+        }
       }
-    }
-    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = false;
+      for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '1';
+        }
       }
     }
   }
@@ -457,17 +465,17 @@ enter4.addEventListener('click', function () {
     enter4.style.display = 'none';
     enter5.style.display = 'block';
     t21.classList.add('oi');
-  }
-  const verdeAmarelo = arr4.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
-  for (let index = 0; index < arrTecla.length; index += 1) {
-    for (let i = 0; i < arr4.length; i += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === arr4[i].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = true;
+    const verdeAmarelo = arr4.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+    for (let index = 0; index < arrTecla.length; index += 1) {
+      for (let i = 0; i < arr4.length; i += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === arr4[i].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '0.5';
+        }
       }
-    }
-    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = false;
+      for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '1';
+        }
       }
     }
   }
@@ -486,17 +494,17 @@ enter5.addEventListener('click', function () {
     enter5.style.display = 'none';
     enter6.style.display = 'block';
     t26.classList.add('oi');
-  }
-  const verdeAmarelo = arr5.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
-  for (let index = 0; index < arrTecla.length; index += 1) {
-    for (let i = 0; i < arr5.length; i += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === arr5[i].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = true;
+    const verdeAmarelo = arr5.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+    for (let index = 0; index < arrTecla.length; index += 1) {
+      for (let i = 0; i < arr5.length; i += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === arr5[i].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '0.5';
+        }
       }
-    }
-    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
-      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
-        arrTecla[index].disabled = false;
+      for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '1';
+        }
       }
     }
   }
@@ -513,10 +521,20 @@ enter6.addEventListener('click', function () {
     }
     enter6.style.display = 'none';
     // enter7.style.display = 'block'
-  }
-  const verdeAmarelo = arr4.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
-  for (let index = 0; index < arrTecla.length; index += 1) {
-    arrTecla[index].disabled = true;
+    const verdeAmarelo = arr6.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+    for (let index = 0; index < arrTecla.length; index += 1) {
+      for (let i = 0; i < arr6.length; i += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === arr6[i].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '0.5';
+        }
+      }
+      for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+        if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+          arrTecla[index].style.opacity = '1';
+        }
+      }
+      arrTecla[index].disabled = true;
+    }
   }
 });
 
