@@ -1,4 +1,4 @@
-const palavraAleatoria = ['caixa', 'saiba', 'vetor', 'exame', 'fosse', 'fauna', 'lugar', 'fonte', 'cioso'];
+const palavraAleatoria = ['caixa', 'vetor', 'exame', 'fosse', 'lugar', 'fonte', 'digno', 'justo', 'anexo', 'moral', 'comum', 'ontem', 'censo', 'enfim', 'regra', 'crise', 'pesar', 'pleno', 'favor', 'visar', 'sinto', 'denso', 'jeito'];
 
 function aleatorio(arr) {
   return palavraAleatoria[~~(palavraAleatoria.length * Math.random())];
@@ -7,6 +7,8 @@ function aleatorio(arr) {
 console.log(aleatorio(palavraAleatoria));
 
 const palavra = aleatorio(palavraAleatoria);
+
+// const palavra ='termo';
 
 const comoJogar = document.getElementById('info');
 const mostrarInfo = document.getElementById('comoJogar');
@@ -102,7 +104,7 @@ const linha1_1 = () => {
   if (verifica === true) {
     const teclado = document.getElementById('teclado');
     const textoWin = document.getElementById('textWin');
-    textoWin.innerText = 'Tá de Hack, só pode! ACERTOU DE PRIMEIRA!';
+    textoWin.innerText = 'Parabéns'
     teclado.style.display = 'none';
   }
   const letrasRestantes = linha1();
@@ -334,6 +336,14 @@ const linha6 = () => {
 }
 
 const linha6_1 = () => {
+  const listaInput = [t26, t27, t28, t29, t30];
+  const verifica = listaInput.every((element) => element.classList.contains('bg-success') !== true);
+  if (verifica === true) {
+    const teclado = document.getElementById('teclado');
+    const textoWin = document.getElementById('textWin');
+    textoWin.innerText = `PERDEU A PALAVRA ERA ${palavra.toUpperCase()}!`
+    teclado.style.display = 'none';
+  }
   const letrasRestantes = linha6();
   const inputFaltando = [t26, t27, t28, t29, t30].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
