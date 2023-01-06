@@ -6,7 +6,7 @@ function aleatorio(arr) {
 
 console.log(aleatorio(palavraAleatoria));
 
-const palavra = 'termo';
+const palavra = aleatorio(palavraAleatoria);
 
 const comoJogar = document.getElementById('info');
 const mostrarInfo = document.getElementById('comoJogar');
@@ -19,7 +19,12 @@ const enter3 = document.getElementById('enter3');
 const enter4 = document.getElementById('enter4');
 const enter5 = document.getElementById('enter5');
 const enter6 = document.getElementById('enter6');
-// const enter7 = document.getElementById('enter7');
+
+const segundaLinha = document.getElementById('segundaLinha');
+const terceiraLinha = document.getElementById('terceiraLinha');
+const quartaLinha = document.getElementById('quartaLinha');
+const quintaLinha = document.getElementById('quintaLinha');
+const sextaLinha = document.getElementById('sextaLinha');
 
 const arrTecla = document.getElementsByClassName('tecla');
 
@@ -97,7 +102,7 @@ const linha1_1 = () => {
   if (verifica === true) {
     const teclado = document.getElementById('teclado');
     const textoWin = document.getElementById('textWin');
-    textoWin.innerText = 'PARABÉNS! ACERTOU DE PRIMEIRA';
+    textoWin.innerText = 'Tá de Hack, só pode! ACERTOU DE PRIMEIRA!';
     teclado.style.display = 'none';
   }
   const letrasRestantes = linha1();
