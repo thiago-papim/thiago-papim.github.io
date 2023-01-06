@@ -11,7 +11,7 @@ const enter3 = document.getElementById('enter3');
 const enter4 = document.getElementById('enter4');
 const enter5 = document.getElementById('enter5');
 const enter6 = document.getElementById('enter6');
-const enter7 = document.getElementById('enter7');
+// const enter7 = document.getElementById('enter7');
 
 const arrTecla = document.getElementsByClassName('tecla');
 
@@ -512,9 +512,7 @@ enter6.addEventListener('click', function () {
       arr6[index].classList.remove('oi');
     }
     enter6.style.display = 'none';
-    enter7.style.display = 'block'
-    const teclado = document.getElementById('teclado');
-    // teclado.style.display = 'none';
+    // enter7.style.display = 'block'
   }
   const verdeAmarelo = arr4.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
   for (let index = 0; index < arrTecla.length; index += 1) {
