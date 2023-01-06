@@ -341,7 +341,7 @@ const linha6_1 = () => {
   if (verifica === true) {
     const teclado = document.getElementById('teclado');
     const textoWin = document.getElementById('textWin');
-    textoWin.innerText = `PERDEU A PALAVRA ERA ${palavra.toUpperCase()}!`
+    textoWin.innerText = `PERDEU, A PALAVRA ERA ${palavra.toUpperCase()}!`
     teclado.style.display = 'none';
   }
   const letrasRestantes = linha6();
