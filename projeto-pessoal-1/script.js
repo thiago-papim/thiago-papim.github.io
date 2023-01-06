@@ -11,6 +11,7 @@ const enter3 = document.getElementById('enter3');
 const enter4 = document.getElementById('enter4');
 const enter5 = document.getElementById('enter5');
 const enter6 = document.getElementById('enter6');
+const enter7 = document.getElementById('enter7');
 
 const arrTecla = document.getElementsByClassName('tecla');
 
@@ -168,6 +169,14 @@ const linha3 = () => {
         listaInput[index].classList.add('p-2');
         listaInput[index].classList.add('text-white');
         listaInput[index].classList.add('bg-opacity-75');
+        for (let i = 0; i < arrTecla.length; i += 1) {
+          if (palavra[index].toUpperCase() === arrTecla[i].innerText) {
+            arrTecla[i].classList.add('bg-success');
+            arrTecla[i].classList.add('p-2');
+            arrTecla[i].classList.add('text-white');
+            arrTecla[i].classList.add('bg-opacity-75');
+          }
+        }
       } else {
         listaInput[index].style.backgroundColor = 'rgba(0, 0, 0, 0.74)';
         letrasRestantes.push(palavra[index])
@@ -204,6 +213,14 @@ const linha4 = () => {
         listaInput[index].classList.add('p-2');
         listaInput[index].classList.add('text-white');
         listaInput[index].classList.add('bg-opacity-75');
+        for (let i = 0; i < arrTecla.length; i += 1) {
+          if (palavra[index].toUpperCase() === arrTecla[i].innerText) {
+            arrTecla[i].classList.add('bg-success');
+            arrTecla[i].classList.add('p-2');
+            arrTecla[i].classList.add('text-white');
+            arrTecla[i].classList.add('bg-opacity-75');
+          }
+        }
       } else {
         listaInput[index].style.backgroundColor = 'rgba(0, 0, 0, 0.74)';
         letrasRestantes.push(palavra[index])
@@ -240,6 +257,14 @@ const linha5 = () => {
         listaInput[index].classList.add('p-2');
         listaInput[index].classList.add('text-white');
         listaInput[index].classList.add('bg-opacity-75');
+        for (let i = 0; i < arrTecla.length; i += 1) {
+          if (palavra[index].toUpperCase() === arrTecla[i].innerText) {
+            arrTecla[i].classList.add('bg-success');
+            arrTecla[i].classList.add('p-2');
+            arrTecla[i].classList.add('text-white');
+            arrTecla[i].classList.add('bg-opacity-75');
+          }
+        }
       } else {
         listaInput[index].style.backgroundColor = 'rgba(0, 0, 0, 0.74)';
         letrasRestantes.push(palavra[index])
@@ -272,11 +297,19 @@ const linha6 = () => {
   if (confirmaPalavra.length === 5) {
     for (let index = 0; index < palavra.length; index += 1) {
       if (palavra[index] === listaInput[index].innerHTML) {
-        listaInput[index].style.backgroundColor = 'green';        
+        listaInput[index].style.backgroundColor = 'green';
         listaInput[index].classList.add('bg-success');
         listaInput[index].classList.add('p-2');
         listaInput[index].classList.add('text-white');
-        listaInput[index].classList.add('bg-opacity-75');      
+        listaInput[index].classList.add('bg-opacity-75');
+        for (let i = 0; i < arrTecla.length; i += 1) {
+          if (palavra[index].toUpperCase() === arrTecla[i].innerText) {
+            arrTecla[i].classList.add('bg-success');
+            arrTecla[i].classList.add('p-2');
+            arrTecla[i].classList.add('text-white');
+            arrTecla[i].classList.add('bg-opacity-75');
+          }
+        }
       } else {
         listaInput[index].style.backgroundColor = 'rgba(0, 0, 0, 0.74)';
         letrasRestantes.push(palavra[index])
@@ -292,7 +325,7 @@ const linha6_1 = () => {
   const inputFaltando = [t26, t27, t28, t29, t30].filter((element) => element.style.backgroundColor !== 'green');
   for (let index = 0; index < inputFaltando.length; index += 1) {
     for (let i = 0; i < letrasRestantes.length; i += 1) {
-      if (inputFaltando[index].value === letrasRestantes[i]) {
+      if (inputFaltando[index].innerHTML === letrasRestantes[i]) {
         inputFaltando[index].classList.add('bg-danger');
         inputFaltando[index].classList.add('p-2');
         inputFaltando[index].classList.add('text-white');
@@ -338,6 +371,19 @@ enter.addEventListener('click', function () {
     enter2.style.display = 'block';
     t6.classList.add('oi');
   }
+  const verdeAmarelo = arr1.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+  for (let index = 0; index < arrTecla.length; index += 1) {
+    for (let i = 0; i < arr1.length; i += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === arr1[i].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = true;
+      }
+    }
+    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = false;
+      }
+    }
+  }
 })
 
 enter2.addEventListener('click', function () {
@@ -354,75 +400,132 @@ enter2.addEventListener('click', function () {
     enter3.style.display = 'block';
     t11.classList.add('oi');
   }
+  const verdeAmarelo = arr2.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+  for (let index = 0; index < arrTecla.length; index += 1) {
+    for (let i = 0; i < arr2.length; i += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === arr2[i].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = true;
+      }
+    }
+    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = false;
+      }
+    }
+  }
 });
 
 enter3.addEventListener('click', function () {
   const confirmaPalavra = `${t11.innerText}${t12.innerText}${t13.innerText}${t14.innerText}${t15.innerText}`;
   if (confirmaPalavra.length === 5) {
-  linha3();
-  linha3_1();
-  for (let index = 0; index < arr1.length; index += 1) {
-    arr3[index].disabled = true;
-    arr3[index].classList.remove('oi');
-    arr4[index].disabled = false;
+    linha3();
+    linha3_1();
+    for (let index = 0; index < arr1.length; index += 1) {
+      arr3[index].disabled = true;
+      arr3[index].classList.remove('oi');
+      arr4[index].disabled = false;
+    }
+    enter3.style.display = 'none';
+    enter4.style.display = 'block';
+    t16.classList.add('oi');
   }
-  enter3.style.display = 'none';
-  enter4.style.display = 'block';
-  t16.classList.add('oi');
-}
+  const verdeAmarelo = arr3.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+  for (let index = 0; index < arrTecla.length; index += 1) {
+    for (let i = 0; i < arr3.length; i += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === arr3[i].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = true;
+      }
+    }
+    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = false;
+      }
+    }
+  }
 });
 
 enter4.addEventListener('click', function () {
   const confirmaPalavra = `${t16.innerText}${t17.innerText}${t18.innerText}${t19.innerText}${t20.innerText}`;
   if (confirmaPalavra.length === 5) {
-  linha4();
-  linha4_1();
-  for (let index = 0; index < arr1.length; index += 1) {
-    arr4[index].disabled = true;
-    arr4[index].classList.remove('oi');
-    arr5[index].disabled = false;
+    linha4();
+    linha4_1();
+    for (let index = 0; index < arr1.length; index += 1) {
+      arr4[index].disabled = true;
+      arr4[index].classList.remove('oi');
+      arr5[index].disabled = false;
+    }
+    enter4.style.display = 'none';
+    enter5.style.display = 'block';
+    t21.classList.add('oi');
   }
-  enter4.style.display = 'none';
-  enter5.style.display = 'block';
-  t21.classList.add('oi');
-}
+  const verdeAmarelo = arr4.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+  for (let index = 0; index < arrTecla.length; index += 1) {
+    for (let i = 0; i < arr4.length; i += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === arr4[i].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = true;
+      }
+    }
+    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = false;
+      }
+    }
+  }
 });
 
 enter5.addEventListener('click', function () {
   const confirmaPalavra = `${t21.innerText}${t22.innerText}${t23.innerText}${t24.innerText}${t25.innerText}`;
   if (confirmaPalavra.length === 5) {
-  linha5();
-  linha5_1();
-  for (let index = 0; index < arr1.length; index += 1) {
-    arr5[index].disabled = true;
-    arr5[index].classList.remove('oi');
-    arr6[index].disabled = false;
+    linha5();
+    linha5_1();
+    for (let index = 0; index < arr1.length; index += 1) {
+      arr5[index].disabled = true;
+      arr5[index].classList.remove('oi');
+      arr6[index].disabled = false;
+    }
+    enter5.style.display = 'none';
+    enter6.style.display = 'block';
+    t26.classList.add('oi');
   }
-  enter5.style.display = 'none';
-  enter6.style.display = 'block';
-  t26.classList.add('oi');
-}
+  const verdeAmarelo = arr5.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+  for (let index = 0; index < arrTecla.length; index += 1) {
+    for (let i = 0; i < arr5.length; i += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === arr5[i].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = true;
+      }
+    }
+    for (let ind = 0; ind < verdeAmarelo.length; ind += 1) {
+      if (arrTecla[index].innerText.toUpperCase() === verdeAmarelo[ind].innerText.toLocaleUpperCase()) {
+        arrTecla[index].disabled = false;
+      }
+    }
+  }
 });
 
 enter6.addEventListener('click', function () {
   const confirmaPalavra = `${t26.innerText}${t27.innerText}${t28.innerText}${t29.innerText}${t30.innerText}`;
   if (confirmaPalavra.length === 5) {
-  linha6();
-  linha6_1();
-  for (let index = 0; index < arr1.length; index += 1) {
-    arr6[index].disabled = true;
-    arr6[index].classList.remove('oi');
+    linha6();
+    linha6_1();
+    for (let index = 0; index < arr1.length; index += 1) {
+      arr6[index].disabled = true;
+      arr6[index].classList.remove('oi');
+    }
+    enter6.style.display = 'none';
+    enter7.style.display = 'block'
+    const teclado = document.getElementById('teclado');
+    // teclado.style.display = 'none';
   }
-  enter6.style.display = 'none';
-  const teclado = document.getElementById('teclado');
-  teclado.style.display = 'none';
-}
+  const verdeAmarelo = arr4.filter((element) => element.classList.contains('bg-success') || element.classList.contains('bg-danger'));
+  for (let index = 0; index < arrTecla.length; index += 1) {
+    arrTecla[index].disabled = true;
+  }
 });
 
 function teclado() {
   let tecla = '';
   for (let index = 0; index < arrTecla.length; index += 1) {
-    arrTecla[index].addEventListener('click', function() {
+    arrTecla[index].addEventListener('click', function () {
       tecla = arrTecla[index].innerHTML.toLowerCase();
       let indN = undefined;
       for (let i = 0; i < arrDiv.length; i += 1) {

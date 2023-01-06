@@ -105,7 +105,7 @@
 #buttonReset {
   margin-left: 10px;
   height: 50px;
-  width: 150px;
+  min-width: 100px;
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -118,7 +118,7 @@
 #comoJogar {
   margin-right: 10px;
   height: 50px;
-  width: 150px;
+  min-width: 100px;
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -177,6 +177,10 @@
   display: none;
 }
 
+#enter7 {
+  display: none;
+}
+
 .inputEx {
   border: 1px black solid;
   border-radius: 10px;
@@ -199,13 +203,6 @@
 }
 
 @media screen and (max-width: 680px) {
-  main {
-    /* border: 1px black solid; */
-  }
-  
-  #linha1 {
-    /*background-color: red;*/
-  }
 
   #header {
     width: 100%;
@@ -215,12 +212,10 @@
   }
 
   #comoJogar {
-    width: 150px;
     height:40px;
   }
 
   #buttonReset {
-    width: 105px;
     height:40px;
   }
 
