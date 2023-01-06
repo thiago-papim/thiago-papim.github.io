@@ -105,7 +105,7 @@
 
 #buttonReset {
   margin-left: 10px;
-  height: 50px;
+  min-height: 50px;
   min-width: 100px;
   border-radius: 10px;
   margin-top: 10px;
@@ -118,7 +118,7 @@
 
 #comoJogar {
   margin-right: 10px;
-  height: 50px;
+  min-height: 50px;
   min-width: 100px;
   border-radius: 10px;
   margin-top: 10px;
@@ -206,14 +206,6 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 0px;
-  }
-
-  #comoJogar {
-    height:40px;
-  }
-
-  #buttonReset {
-    height:40px;
   }
 
   #header {
