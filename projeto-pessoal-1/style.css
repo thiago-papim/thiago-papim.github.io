@@ -178,10 +178,6 @@
   display: none;
 }
 
-#enter7 {
-  display: none;
-}
-
 .inputEx {
   border: 1px black solid;
   border-radius: 10px;
@@ -244,16 +240,3 @@
   }
 
 }
-
-/* @media screen and (max-width: 412px){
-
-  #inputText {
-    width: 40px;
-    height: 40px;
-  }
-
-  #tecla {
-    width: 25px;
-    height: 30px;
-  }
-} */
