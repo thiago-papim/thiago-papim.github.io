@@ -1,0 +1,263 @@
+* {
+  background-color: rgb(112, 133, 133);
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding-bottom: 20px;
+}
+
+#pExemplo {
+  margin-top: 20px;
+  border-top: 1px black solid;
+}
+
+#primeiraLinha {
+  justify-content: center;
+  display: flex;
+}
+
+#segundaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#terceiraLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#quartaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#quintaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+#sextaLinha {
+  justify-content: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+.quadradoTexto {
+  border: 1px solid rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+}
+
+.inputText {
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+  text-size-adjust: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 5px;
+  background-color: grey;
+  color: rgb(255, 255, 255);
+}
+
+.confirmaClass {
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.exemplo {
+  border: 1px solid rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+#exemplo1 {
+  display: flex;
+}
+
+#letraCerta {
+  border: 1px solid rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+  background-color: green;
+}
+
+#letraCerta2 {
+  border: 1px solid rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+#buttonReset {
+  margin-left: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#testee {
+  padding: 0px;
+  margin: 0px;
+}
+
+#comoJogar {
+  margin-right: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#fechaMenu {
+  margin-left: 10px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#teclado {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px black solid; */
+}
+
+.linhaTeclado {
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.tecla {
+  border: 1px black solid;
+  width: 60px;
+  height: 70px;
+  margin: 3PX;
+}
+
+.oi {
+  border: 5px black solid;
+}
+
+#enter2 {
+  display: none;
+}
+
+#enter3 {
+  display: none;
+}
+
+#enter4 {
+  display: none;
+}
+
+#enter5 {
+  display: none;
+}
+
+#enter6 {
+  display: none;
+}
+
+.inputEx {
+  border: 1px black solid;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+  /* text-size-adjust: 10px; */
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 5px;
+  background-color: rgb(158, 134, 134);
+}
+
+#header {
+  padding: 0px;
+  padding-bottom: 5px;
+}
+
+.winGeral {
+  text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+  main {
+    /* border: 1px black solid; */
+  }
+  
+  #linha1 {
+    /*background-color: red;*/
+  }
+
+  #header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px;
+  }
+
+  #comoJogar {
+    width: 150px;
+    height:40px;
+  }
+
+  #buttonReset {
+    width: 105px;
+    height:40px;
+  }
+
+  #header {
+    padding: 10px;
+  }
+
+  #teclado {
+    max-height: 100vh;
+    /* justify-content:space-evenly; */
+  }
+
+  .inputText {
+    width: 60px;
+    height: 60px;
+  }
+
+  .inputEx {
+    width: 40px;
+    height: 40px;
+  }
+
+  #comoJogar {
+    width: 114px;
+  }
+
+}
+
+@media screen and (max-width: 412px){
+
+  #inputText {
+    width: 40px;
+    height: 40px;
+  }
+
+  #tecla {
+    width: 25px;
+    height: 30px;
+  }
+}
