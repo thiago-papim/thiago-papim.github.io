@@ -1,14 +1,27 @@
 import PropTypes from 'prop-types';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import AppContext from './AppContext';
 
 function AppProvider({ children }) {
   const [homeValue, setHomeValue] = useState('Home');
+  const [theme, setTheme] = useState('dark');
+  const [btnMobile, setBtnMobile] = useState(false);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove('ligth');
+    root.classList.remove('dark');
+    root.classList.add(theme);
+  }, [theme]);
 
   const values = useMemo(() => ({
     homeValue,
     setHomeValue,
-  }), [homeValue]);
+    theme,
+    setTheme,
+    btnMobile,
+    setBtnMobile,
+  }), [homeValue, theme, btnMobile]);
 
   return (
     <AppContext.Provider value={ values }>

@@ -7,15 +7,13 @@ import AppProvider from './context/AppProvider';
 
 function App() {
   return (
-    <div className="bg-[url('./images/fundo.png')] bg-cover bg-center">
-      <AppProvider>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact render={ (props) => <Home { ...props } /> } />
-          </Switch>
-        </BrowserRouter>
-      </AppProvider>
-    </div>
+    <AppProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact render={ (props) => <Home { ...props } /> } />
+        </Switch>
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 
