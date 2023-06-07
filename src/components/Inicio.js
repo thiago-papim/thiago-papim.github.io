@@ -1,14 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function Inicio() {
+  const [text, setText] = useState('');
+  const fullText = 'BBem vindo,<br />Eu sou o Thiago!';
+  const typingSpeed = 70; // Velocidade da digitação em milissegundos
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length - 1) {
+        setText((prevText) => prevText + fullText[currentIndex]);
+        currentIndex++;
+      }
+
+      if (currentIndex >= fullText.length) {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, [fullText]);
+
+  const cursorStyle = {
+    opacity: text === fullText ? 0 : 1,
+  };
   return (
     <div className="lg:w-4/5 w-full fontHeader">
       <h1
         className="lg:text-6xl text-4xl text-center dark:text-white"
       >
-        Bem vindo
-        <br />
-        Eu sou o Thiago!
+        <span dangerouslySetInnerHTML={ { __html: text } } />
+        <span
+          className="inline-block piscar"
+          style={ cursorStyle }
+        >
+          |
+
+        </span>
       </h1>
       <div className=" flex flex-col items-center pt-20">
         <h2

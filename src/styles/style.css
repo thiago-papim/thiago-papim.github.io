@@ -36,3 +36,71 @@
 .fontHeader {
   font-family: 'Anonymous Pro';
 }
+
+.mobileAnimation {
+  animation: go-back 1s;
+}
+
+.btnGitHub {
+  animation: go-left 3s;
+}
+
+.btnLinkedIn {
+  animation: go-right 3s;
+}
+
+@keyframes go-back {
+  from {
+    transform: translatey(-100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes go-left {
+  from {
+    transform: translateX(35vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes go-right {
+  from {
+    transform: translateX(-35vw)
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.avatar {
+  animation: go-up 1s;
+}
+
+@keyframes go-up {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
+.piscar {
+  animation: blink 0.7s infinite;
+}

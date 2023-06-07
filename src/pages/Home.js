@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 
 function Home() {
   const { homeValue } = useContext(AppContext);
+
   return (
     <div
       className="flex flex-col h-screen w-[100%]
@@ -28,9 +29,9 @@ function Home() {
         { homeValue === 'Projetos' && <Projetos />}
         { homeValue === 'Contato' && <Contato />}
         <div
-          className="flex w-2/5 items-end flex-col"
+          className="flex w-2/5 items-end flex-col overflow-hidden"
         >
-          <div className="lg:flex flex-col h-full justify-end items-end hidden">
+          <div className="lg:flex flex-col h-full justify-end items-end hidden avatar">
             <img
               src={ avatarCompleto }
               alt="Avatar"

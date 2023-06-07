@@ -138,7 +138,7 @@ function Header() {
       { btnMobile
       && (
         <div className="flex justify-center">
-          <div className="lg:hidden flex flex-col w-1/2">
+          <div className="lg:hidden flex flex-col w-1/2 mobileAnimation">
             { arrBtn.map((e) => (
               <button
                 key={ e }

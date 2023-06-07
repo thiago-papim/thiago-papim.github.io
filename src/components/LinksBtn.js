@@ -13,7 +13,7 @@ function LinksBtn() {
     justify-center items-center dark:bg-black bg-white items-end px-10"
     >
       <a
-        className="px-8"
+        className="px-8 btnLinkedIn"
         href="//www.linkedin.com/in/thiago-papim/"
         target="_blank"
         rel="noreferrer"
@@ -25,7 +25,7 @@ function LinksBtn() {
         />
       </a>
       <a
-        className="px-8"
+        className="px-8 btnGitHub"
         href="//github.com/thiago-papim"
         target="_blank"
         rel="noreferrer"
