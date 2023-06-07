@@ -73,42 +73,6 @@ function Header() {
         )}
         </div>
         <div className="flex">
-          {btnMobile ? (
-            <button
-              onClick={ () => { setBtnMobile(!btnMobile); } }
-            >
-              { theme === 'ligth'
-                ? (
-                  <img
-                    className="w-8 flex lg:hidden"
-                    src={ xDark }
-                    alt="hamdark"
-                  />)
-                : (
-                  <img
-                    className="w-8 flex lg:hidden"
-                    src={ xWhite }
-                    alt="hambLigth"
-                  />)}
-            </button>)
-            : (
-              <button
-                onClick={ () => { setBtnMobile(!btnMobile); } }
-              >
-                { theme === 'ligth'
-                  ? (
-                    <img
-                      className="w-12 flex lg:hidden"
-                      src={ hambDark }
-                      alt="hamdark"
-                    />)
-                  : (
-                    <img
-                      className="w-12 flex lg:hidden"
-                      src={ hambLigth }
-                      alt="hambLigth"
-                    />)}
-              </button>)}
           { theme === 'dark' ? (
             <button
               className="w-11 hover:scale-105 focus:scale-110 lg:hidden flex py-5"
@@ -131,6 +95,44 @@ function Header() {
                 <img src={ dark } alt="light-mode" />
               </button>
             )}
+          {btnMobile ? (
+            <button
+              className="pl-4"
+              onClick={ () => { setBtnMobile(!btnMobile); } }
+            >
+              { theme === 'ligth'
+                ? (
+                  <img
+                    className="w-8 flex lg:hidden"
+                    src={ xDark }
+                    alt="hamdark"
+                  />)
+                : (
+                  <img
+                    className="w-8 flex lg:hidden"
+                    src={ xWhite }
+                    alt="hambLigth"
+                  />)}
+            </button>)
+            : (
+              <button
+                className="pl-4"
+                onClick={ () => { setBtnMobile(!btnMobile); } }
+              >
+                { theme === 'ligth'
+                  ? (
+                    <img
+                      className="w-12 flex lg:hidden"
+                      src={ hambDark }
+                      alt="hamdark"
+                    />)
+                  : (
+                    <img
+                      className="w-12 flex lg:hidden"
+                      src={ hambLigth }
+                      alt="hambLigth"
+                    />)}
+              </button>)}
         </div>
       </div>
       { btnMobile
