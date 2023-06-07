@@ -9,7 +9,7 @@ function LinksBtn() {
   const { theme } = useContext(AppContext);
   return (
     <div
-      className="flex lg:hidden lg:flex-col w-screen
+      className="flex w-screen
     justify-center items-center dark:bg-black bg-white items-end px-10"
     >
       <a

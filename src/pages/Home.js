@@ -4,7 +4,6 @@ import avatarCompleto from '../images/avatarCompleto.png';
 
 import AppContext from '../context/AppContext';
 
-import LinksBtn from '../components/LinksBtn';
 import Header from '../components/Header';
 import Inicio from '../components/Inicio';
 import Sobre from '../components/Sobre';
@@ -31,9 +30,6 @@ function Home() {
         <div
           className="flex w-2/5 items-end flex-col"
         >
-          <div className="h-1/7 lg:flex hidden">
-            <LinksBtn />
-          </div>
           <div className="lg:flex flex-col h-full justify-end items-end hidden">
             <img
               src={ avatarCompleto }
