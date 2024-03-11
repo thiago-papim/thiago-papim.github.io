@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'custom': ['"Anonymous Pro"'],
+    }
   },
   plugins: [
     require('flowbite/plugin')

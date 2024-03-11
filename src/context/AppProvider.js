@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import AppContext from './AppContext';
 
 function AppProvider({ children }) {
-  const [homeValue, setHomeValue] = useState('Home');
+  const [homeValue, setHomeValue] = useState(0);
   const [theme, setTheme] = useState('dark');
   const [btnMobile, setBtnMobile] = useState(false);
 
