@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import DownloadPdf from '../components/DownloadPdf';
 
 export default function Sobre() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -40,7 +41,7 @@ export default function Sobre() {
       min-h-screen"
     >
       <Header />
-      <div className="flex flex-col mb-14">
+      <div className="flex flex-col items-center mb-14">
         <div className="flex flex-col md:justify-start justify-center">
           <Typography
             style={ { fontSize, fontWeight: 'bold', textAlign: 'center' } }
@@ -149,6 +150,9 @@ export default function Sobre() {
               </h2>
             </div>
           </div>
+        </div>
+        <div className="mt-4 mb-5">
+          <DownloadPdf />
         </div>
       </div>
       <Footer />
