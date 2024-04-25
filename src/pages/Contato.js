@@ -17,6 +17,10 @@ export default function Contato() {
     mensagem: '',
   });
 
+  useState(() => {
+    localStorage.setItem('menuItem', 3);
+  }, []);
+
   const onGenericChange = (e) => {
     const { target: { value, name } } = e;
     setInfo({ ...info, [name]: value });

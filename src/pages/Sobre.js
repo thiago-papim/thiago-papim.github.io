@@ -11,14 +11,11 @@ export default function Sobre() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    localStorage.setItem('menuItem', 1);
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
-    // Adiciona um ouvinte de evento de redimensionamento
     window.addEventListener('resize', handleResize);
-
-    // Remove o ouvinte de evento ao desmontar o componente
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -41,7 +38,7 @@ export default function Sobre() {
       min-h-screen"
     >
       <Header />
-      <div className="flex flex-col items-center mb-14">
+      <div className="flex flex-col items-center pb-14">
         <div className="flex flex-col md:justify-start justify-center">
           <Typography
             style={ { fontSize, fontWeight: 'bold', textAlign: 'center' } }
@@ -151,7 +148,7 @@ export default function Sobre() {
             </div>
           </div>
         </div>
-        <div className="mt-4 mb-5">
+        <div className="pt-4 pb-5">
           <DownloadPdf />
         </div>
       </div>

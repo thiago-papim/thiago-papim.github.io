@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable max-lines */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Button } from 'flowbite-react';
@@ -11,6 +11,10 @@ import { arrBackend, arrFrontend } from '../utils/ProjectsGithub';
 
 export default function Projetos() {
   const [expanded, setExpanded] = React.useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('menuItem', 2);
+  }, []);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);

@@ -12,6 +12,7 @@ function Home() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    localStorage.setItem('menuItem', 0);
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
