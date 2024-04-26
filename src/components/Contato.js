@@ -68,7 +68,7 @@ export default function Contato() {
         text-center"
         >
           <div
-            className="w-full items-center flex flex-col mt-4 h-[350px]"
+            className="w-full items-center flex flex-col mt-4"
           >
             { msgEnvio ? (
               <div className="md:w-[600px] w-[90%]">
@@ -144,28 +144,28 @@ export default function Contato() {
                 } }
               />
             </div>
-          </div>
-          <div className="m-3 w-full flex justify-center">
-            <button
-              onClick={ enviar }
-              style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
-              className="transition duration-200 border-[#64b5f6] text-black border-2 h-10 px-4 rounded-2xl
+            <div className="m-3 w-full flex justify-center">
+              <button
+                onClick={ enviar }
+                style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
+                className="transition duration-200 border-[#64b5f6] text-black border-2 h-10 px-4 rounded-2xl
            bg-[#64b5f6] hover:text-white md:w-[300px] w-[90%]"
-            >
-              Enviar
-            </button>
-          </div>
-        </div>
-        <div
-          style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 400 } }
-          className="flex flex-col lg:justify-center mb-3
+              >
+                Enviar
+              </button>
+            </div>
+            <div
+              style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 400 } }
+              className="flex flex-col lg:justify-center mb-3
         text-center items-center lg:w-full lg:mt-3 px-2"
-        >
-          <p>
-            Telefone de Contato
-            <br />
-            (11) 94916-0023
-          </p>
+            >
+              <p>
+                Telefone de Contato
+                <br />
+                (11) 94916-0023
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
