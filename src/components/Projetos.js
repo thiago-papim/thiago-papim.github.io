@@ -24,8 +24,24 @@ function Projetos() {
   return (
     <div className="flex w-full items-center font-[Poppins] mt-10 flex-col text-white justify-center">
       <ButtonGroup variant="outlined" aria-label="Basic button group">
-        <Button onClick={ () => setModo(false) }>Front-End</Button>
-        <Button onClick={ () => setModo(true) }>Back-end</Button>
+        <Button
+          style={ { backgroundColor: modo ? '' : '#64b5f6', color: modo ? '' : 'black' } }
+          onClick={ () => {
+            setExpandedIndex(null);
+            setModo(false);
+          } }
+        >
+          Front-End
+        </Button>
+        <Button
+          style={ { backgroundColor: !modo ? '' : '#64b5f6', color: !modo ? '' : 'black' } }
+          onClick={ () => {
+            setExpandedIndex(null);
+            setModo(true);
+          } }
+        >
+          Back-end
+        </Button>
       </ButtonGroup>
       <div className="flex flex-wrap justify-center mt-5">
         {modo ? (
