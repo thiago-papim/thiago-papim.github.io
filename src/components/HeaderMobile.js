@@ -1,87 +1,88 @@
-/* eslint-disable react/jsx-max-depth */
-import React, { useContext, useState } from 'react';
+/* eslint-disable max-len */
+/* eslint-disable no-unused-vars */
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import { useHistory } from 'react-router-dom';
-import menuBlack from '../images/hamburguerBlack.png';
-import menuWhite from '../images/hamburguerWhite.png';
-import AppContext from '../context/AppContext';
+import hamburguerMenu from '../images/hamburguerWhite.png';
 
-export default function TemporaryDrawer() {
-  const { theme } = useContext(AppContext);
-  const [state, setState] = useState({ right: false });
-  const history = useHistory();
+export default function HeaderMobile() {
+  const [open, setOpen] = React.useState(false);
 
-  const icons = [<HomeIcon key={ 1 } />, <InfoIcon key={ 2 } />,
-    <LibraryBooksIcon key={ 3 } />, <ContactMailIcon key={ 4 } />];
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-    setState({ ...state, [anchor]: open });
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
   };
 
-  const handleTab = (text, index) => {
-    localStorage.setItem('menuItem', index);
-    if (index > 0) {
-      history.push(`/${text.toLowerCase()}`);
-    } else {
-      history.push('/');
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      const yOffset = -50; // Deslocamento opcional para compensar o cabeçalho
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
     }
   };
 
-  const list = () => (
+  const arrMenu = ['Inicio', 'Skills', 'Projetos', 'Contato'];
+
+  const DrawerList = (
     <Box
-      sx={ { width: 250 } }
+      sx={ {
+        width: 250,
+        height: '100%',
+        backgroundColor: '#201c24',
+        color: 'white',
+      } }
       role="presentation"
-      onClick={ toggleDrawer('right', false) }
-      onKeyDown={ toggleDrawer('right', false) }
+      onClick={ toggleDrawer(false) }
     >
       <List>
-        {['Início', 'Sobre', 'Projetos', 'Contato'].map((text, index) => (
+        {arrMenu.map((text) => (
           <ListItem
-            onClick={ () => handleTab(text, index) }
+            className="hover:bg-[#64b5f6]"
             key={ text }
             disablePadding
+            onClick={ () => scrollToSection(text) }
           >
             <ListItemButton>
-              <ListItemIcon>
-                {icons[index]}
-              </ListItemIcon>
               <ListItemText primary={ text } />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
+      <Divider className="bg-white" />
+      <button
+        style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
+        className="transition duration-700 border-[#64b5f6] border-2 h-10 px-4 rounded-3xl
+          text-black bg-[#64b5f6] m-3"
+        onClick={ () => window.open('//github.com/thiago-papim') }
+
+      >
+        GitHub Profile
+      </button>
     </Box>
   );
 
   return (
-    <div>
-      <Button onClick={ toggleDrawer('right', true) }>
+    <div className="flex">
+      <Button onClick={ toggleDrawer(true) }>
         <img
-          src={ theme !== 'dark' ? menuBlack : menuWhite }
-          alt="menu"
           className="w-8"
+          src={ hamburguerMenu }
+          alt="menu"
         />
       </Button>
-      <Drawer
-        anchor="right"
-        open={ state.right }
-        onClose={ toggleDrawer('right', false) }
-      >
-        {list()}
+      <Drawer anchor="right" open={ open } onClose={ toggleDrawer(false) }>
+        {DrawerList}
       </Drawer>
     </div>
   );
