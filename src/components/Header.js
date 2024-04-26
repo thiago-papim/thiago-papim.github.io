@@ -11,7 +11,7 @@ import HeaderMobile from './HeaderMobile';
 function Header() {
   return (
     <div
-      className="flex w-full bg-[#201c24] h-20 text-white justify-center fixed"
+      className="flex w-full bg-[#201c24] h-20 text-white justify-center fixed z-50"
     >
       <div className="flex lg:w-[1200px] w-full justify-between">
         <div className="flex font-[Poppins] text-[18px] font-bold items-center pl-5">
