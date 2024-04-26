@@ -35,13 +35,27 @@ function Projetos() {
               style={ { boxShadow: '0 0 20px rgba(0, 0, 0, 0.9)' } }
               key={ i }
             >
-              <p className="py-5 text-[#64b5f6]">{e.name}</p>
-              <Collapse in={ expandedIndex === i }>
+              <p
+                className="py-5 text-[#64b5f6]"
+                style={ { fontFamily: 'Poppins, sans-serif' } }
+              >
+                {e.name}
+              </p>
+              <Collapse
+                in={ expandedIndex === i }
+                style={ { fontFamily: 'Poppins, sans-serif' } }
+              >
                 <p>{e.description}</p>
               </Collapse>
               {e.description.length > maxLength ? (
                 <>
-                  {expandedIndex === i ? '' : <p>{truncateText(e.description)}</p>}
+                  {expandedIndex === i ? '' : (
+                    <p
+                      style={ { fontFamily: 'Poppins, sans-serif' } }
+                    >
+                      {truncateText(e.description)}
+                    </p>
+                  )}
                   <Button
                     onClick={ () => handleExpandClick(i) }
                     style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
@@ -56,6 +70,7 @@ function Projetos() {
                 style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
                 className="transition duration-700 border-[#64b5f6] bg-[#201c24] border-2 h-10 text-[#64b5f6] px-4 rounded-3xl
           hover:text-black hover:bg-[#64b5f6] my-2 w-[200px]"
+                onClick={ () => window.open(e.url) }
               >
                 Ver código
               </button>
@@ -68,13 +83,26 @@ function Projetos() {
               style={ { boxShadow: '0 0 20px rgba(0, 0, 0, 0.9)' } }
               key={ i }
             >
-              <p className="py-5 text-[#64b5f6]">{e.name}</p>
-              <Collapse in={ expandedIndex === i }>
+              <p
+                style={ { fontFamily: 'Poppins, sans-serif' } }
+                className="py-5 text-[#64b5f6]"
+              >
+                {e.name}
+              </p>
+              <Collapse
+                in={ expandedIndex === i }
+                style={ { fontFamily: 'Poppins, sans-serif' } }
+              >
                 <p>{e.description}</p>
               </Collapse>
               {e.description.length > maxLength ? (
                 <>
-                  {expandedIndex === i ? '' : <p>{truncateText(e.description)}</p>}
+                  {expandedIndex === i ? '' : (
+                    <p
+                      style={ { fontFamily: 'Poppins, sans-serif' } }
+                    >
+                      {truncateText(e.description)}
+                    </p>)}
                   <Button
                     onClick={ () => handleExpandClick(i) }
                     style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
@@ -89,6 +117,7 @@ function Projetos() {
                 style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 500 } }
                 className="transition duration-700 border-[#64b5f6] bg-[#201c24] border-2 h-10 text-[#64b5f6] px-4 rounded-3xl
           hover:text-black hover:bg-[#64b5f6] my-2 w-[200px]"
+                onClick={ () => window.open(e.url) }
               >
                 Ver código
               </button>
