@@ -18,10 +18,6 @@ export default function Contato() {
     mensagem: '',
   });
 
-  useState(() => {
-    localStorage.setItem('menuItem', 3);
-  }, []);
-
   const onGenericChange = (e) => {
     const { target: { value, name } } = e;
     setInfo({ ...info, [name]: value });
@@ -37,11 +33,12 @@ export default function Contato() {
       email: info.email,
     };
     const response = await emailjs.send(
-      'service_dl4nema',
+      'service_b73x98w',
       'template_w3iekgk',
       templeteParams,
-      'OSuuCWBO6Qc2by8bB',
+      'de8LuDniyoi1QNIpw',
     );
+    console.log(response);
     if (response.status === 200) {
       setInfo({
         nome: '',
@@ -53,6 +50,7 @@ export default function Contato() {
     setOpen(false);
     setMsgEnvio(true);
   };
+
   return (
     <div
       className="flex flex-col justify-center items center text-white rounded-2xl lg:w-[700px] w-[90%]"
