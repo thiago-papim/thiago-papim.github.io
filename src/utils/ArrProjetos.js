@@ -41,7 +41,7 @@ export const arrFrontend = [
   {
     name: 'Online Store',
     url: 'https://github.com/thiago-papim/online-store',
-    description: 'Participarei do desenvolvimento de uma loja online simplificada em grupo, seguindo demandas definidas em um quadro Kanban, simulando um ambiente próximo ao mercado de trabalho. A aplicação permitirá que os usuários busquem produtos via API do Mercado Livre, interajam com o carrinho de compras, visualizem detalhes e avaliações de produtos, além de simular a finalização da compra. O projeto envolve a compreensão e aplicação de métodos ágeis, Kanban e Scrum, proporcionando uma oportunidade para praticar habilidades do módulo de Front-end.',
+    description: 'Participei do desenvolvimento de uma loja online simplificada em grupo, seguindo demandas definidas em um quadro Kanban, simulando um ambiente próximo ao mercado de trabalho. A aplicação permitirá que os usuários busquem produtos via API do Mercado Livre, interajam com o carrinho de compras, visualizem detalhes e avaliações de produtos, além de simular a finalização da compra. O projeto envolve a compreensão e aplicação de métodos ágeis, Kanban e Scrum, proporcionando uma oportunidade para praticar habilidades do módulo de Front-end.',
   },
   {
     name: 'Trivia',
@@ -51,6 +51,6 @@ export const arrFrontend = [
   {
     name: 'Recipes App',
     url: 'https://github.com/thiago-papim/recipes-app',
-    description: 'Desenvolverei um aplicativo de receitas utilizando tecnologias modernas no ecossistema React, como Hooks e Context API. O app permite visualizar, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas de comidas e bebidas. Utilizarei duas APIs distintas para as bases de dados de comidas e bebidas, com foco no layout para dispositivos móveis. Durante o projeto, aplicarei habilidades como Redux para gerenciamento de estado, React-Redux, Context API, React Hooks como useState, useContext e useEffect, além de criar Hooks customizados. O objetivo é proporcionar uma experiência completa e eficiente para os usuários na exploração e preparo de receitas.',
+    description: 'Desenvolvi um aplicativo de receitas utilizando tecnologias modernas no ecossistema React, como Hooks e Context API. O app permite visualizar, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas de comidas e bebidas. Utilizarei duas APIs distintas para as bases de dados de comidas e bebidas, com foco no layout para dispositivos móveis. Durante o projeto, aplicarei habilidades como Redux para gerenciamento de estado, React-Redux, Context API, React Hooks como useState, useContext e useEffect, além de criar Hooks customizados. O objetivo é proporcionar uma experiência completa e eficiente para os usuários na exploração e preparo de receitas.',
   },
 ];
