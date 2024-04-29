@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.089b23a8.css",
-    "main.js": "/static/js/main.f8c64cd7.js",
+    "main.css": "/static/css/main.a47a5643.css",
+    "main.js": "/static/js/main.9529edd2.js",
     "static/js/787.85478b7a.chunk.js": "/static/js/787.85478b7a.chunk.js",
     "static/media/logo-terno.png": "/static/media/logo-terno.d56cc96c67fcba685534.png",
     "static/media/logo-tailwind.png": "/static/media/logo-tailwind.3549d9e451d7abb96934.png",
@@ -43,12 +43,12 @@
     "static/media/sequelize-seeklogo.svg": "/static/media/sequelize-seeklogo.49ad3c7d6edea99417163e71b0721e5c.svg",
     "static/media/logo-beekeeper.svg": "/static/media/logo-beekeeper.ce2154279ffe9d891be32b598f630f96.svg",
     "index.html": "/index.html",
-    "main.089b23a8.css.map": "/static/css/main.089b23a8.css.map",
-    "main.f8c64cd7.js.map": "/static/js/main.f8c64cd7.js.map",
+    "main.a47a5643.css.map": "/static/css/main.a47a5643.css.map",
+    "main.9529edd2.js.map": "/static/js/main.9529edd2.js.map",
     "787.85478b7a.chunk.js.map": "/static/js/787.85478b7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.089b23a8.css",
-    "static/js/main.f8c64cd7.js"
+    "static/css/main.a47a5643.css",
+    "static/js/main.9529edd2.js"
   ]
 }
