@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.223d2105.css",
-    "main.js": "/static/js/main.39e84341.js",
+    "main.css": "/static/css/main.089b23a8.css",
+    "main.js": "/static/js/main.7b86972e.js",
     "static/js/787.85478b7a.chunk.js": "/static/js/787.85478b7a.chunk.js",
     "static/media/logo-terno.png": "/static/media/logo-terno.d56cc96c67fcba685534.png",
     "static/media/logo-tailwind.png": "/static/media/logo-tailwind.3549d9e451d7abb96934.png",
@@ -10,7 +10,9 @@
     "static/media/logo-mysql.png": "/static/media/logo-mysql.910a4566f5d136d5196b.png",
     "static/media/logo-arquiteturaMSC.png": "/static/media/logo-arquiteturaMSC.bbcf8236b47315030dba.png",
     "static/media/nome-linkedin.png": "/static/media/nome-linkedin.2de77728f3cb29c19351.png",
+    "static/media/Profile.pdf": "/static/media/Profile.ef4b6b846cfd98f80a0a.pdf",
     "static/media/whatsapp.png": "/static/media/whatsapp.3dbeb6a739be429b2316.png",
+    "static/media/pdf.png": "/static/media/pdf.ee93d8eda899f7861877.png",
     "static/media/logo-react.png": "/static/media/logo-react.20adfb35ae6a6e5817bf.png",
     "static/media/hamburguerWhite.png": "/static/media/hamburguerWhite.745580e91f9a46765063.png",
     "static/media/logo-git.png": "/static/media/logo-git.dfdd0989ffe0184bdd68.png",
@@ -41,12 +43,12 @@
     "static/media/sequelize-seeklogo.svg": "/static/media/sequelize-seeklogo.49ad3c7d6edea99417163e71b0721e5c.svg",
     "static/media/logo-beekeeper.svg": "/static/media/logo-beekeeper.ce2154279ffe9d891be32b598f630f96.svg",
     "index.html": "/index.html",
-    "main.223d2105.css.map": "/static/css/main.223d2105.css.map",
-    "main.39e84341.js.map": "/static/js/main.39e84341.js.map",
+    "main.089b23a8.css.map": "/static/css/main.089b23a8.css.map",
+    "main.7b86972e.js.map": "/static/js/main.7b86972e.js.map",
     "787.85478b7a.chunk.js.map": "/static/js/787.85478b7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.223d2105.css",
-    "static/js/main.39e84341.js"
+    "static/css/main.089b23a8.css",
+    "static/js/main.7b86972e.js"
   ]
 }
