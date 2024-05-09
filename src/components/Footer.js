@@ -7,6 +7,7 @@ import React from 'react';
 import logoLinkedIn from '../images/logoLinkedIn.png';
 import logoWhatsapp from '../images/whatsapp.png';
 import logoGithub from '../images/logoGithubLigth.png';
+import DownloadPdf from './DownloadPdf';
 
 const arrMenu = [
   {
@@ -40,6 +41,7 @@ function Footer() {
 
   return (
     <div className="flex flex-col w-full">
+      <DownloadPdf />
       <div className="flex flex-col sm:flex-row justify-center items-center">
         {arrMenu.map((e, i) => (
           <div

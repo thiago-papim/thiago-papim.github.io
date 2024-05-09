@@ -50,16 +50,16 @@ function SkillsOutros() {
         {
           front.map((e, i) => (
             <div
-              className="flex justify-center items-center
+              className="flex justify-between items-center
               border-1 rounded-lg m-2 md:w-40 md:h-16 w-36 h-12 bg-white text-black"
               key={ i }
             >
               <img
-                className="md:w-12 md:h-12 w-8 h-8"
+                className="w-1/4 ml-3"
                 src={ e.imagem }
                 alt={ e.nome }
               />
-              <p className="pl-2">{e.nome}</p>
+              <p className="px-1 w-3/4 text-center">{e.nome}</p>
             </div>
           ))
         }

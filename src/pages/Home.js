@@ -12,12 +12,14 @@ import SkillsFront from '../components/SkillsFront';
 import Projetos from '../components/Projetos';
 import Contato from '../components/Contato';
 import Footer from '../components/Footer';
+import DividerT from '../utils/DividerT';
 
 function Home() {
   return (
     <div id="Inicio">
       <Header />
       <Sobre />
+      <DividerT medida="0 0 50 100" />
       {/* Skills */}
       <div
         id="Skills"
@@ -41,6 +43,7 @@ function Home() {
           <SkillsOutros />
         </div>
       </div>
+      <DividerT medida="0 0 100 100" />
       {/* Projetos */}
       <div
         id="Projetos"
@@ -62,6 +65,7 @@ function Home() {
           <Projetos />
         </div>
       </div>
+      <DividerT medida="0 0 50 100" />
       {/* Contato */}
       <div
         id="Contato"
@@ -84,6 +88,7 @@ function Home() {
           <Contato />
         </div>
       </div>
+      <DividerT medida="0 0 100 100" />
       <div className="flex flex-col justify-center items-center bg-[#201c24] py-3">
         <p
           style={ { fontFamily: 'Poppins, sans-serif', fontWeight: 600 } }
