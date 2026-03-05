@@ -4,8 +4,11 @@ import MenuIcon from '@mui/icons-material/Menu'
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 import { useState } from 'react'
 import { Drawer } from '@mui/material'
+import TerminalIcon from '@mui/icons-material/Terminal'
+import { useTerminal } from './context/TerminalContext'
 
 export default function Header() {
+  const { openTerminal, terminalMode } = useTerminal()
   const [open, setOpen] = useState(false)
 
   const toggleDrawer = (newOpen) => () => {
@@ -72,10 +75,18 @@ export default function Header() {
         {' '}
         <img src={Logo} alt="Logo" className="w-10 h-10" />
         <div className="hidden md:flex">
-          <BtnHeader nome="Início" section="inicio" />
-          <BtnHeader nome="Skills" section="skills" />
-          <BtnHeader nome="Projetos" section="projetos" />
-          <BtnHeader nome="Contato" section="contato" />
+          {!terminalMode && (
+            <>
+              <BtnHeader nome="Início" section="inicio" />
+              <BtnHeader nome="Skills" section="skills" />
+              <BtnHeader nome="Projetos" section="projetos" />
+              <BtnHeader nome="Contato" section="contato" />
+            </>
+          )}
+          <TerminalIcon
+            onClick={openTerminal}
+            className="mx-5 w-8 h-8 cursor-pointer hover:scale-110 transition"
+          />
           <AnimatedThemeToggler />
         </div>
         <div className="md:hidden" anchor="top">

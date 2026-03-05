@@ -66,6 +66,11 @@ const back = [
 
 const outros = [
   {
+    nome: 'React Native',
+    imagem:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original-wordmark.svg',
+  },
+  {
     nome: 'Git',
     imagem:
       'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',

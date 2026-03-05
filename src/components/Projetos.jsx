@@ -35,7 +35,7 @@ export default function Projetos() {
         ${
           categoria === item
             ? 'bg-[#3D5A80] text-white'
-            : 'bg-[#cee8ff] dark:bg-[#1f2b3e] dark:text-white'
+            : 'bg-[#acc2ef] dark:bg-[#0F1C2E] dark:text-white'
         }
         hover:scale-105
       `}
@@ -51,7 +51,7 @@ export default function Projetos() {
               <div
                 className="
                     flex flex-col items-start 
-                    dark:bg-[#1f2b3e] bg-[#acc2ef] p-4 rounded-lg 
+                    dark:bg-[#0F1C2E] bg-[#acc2ef] p-4 rounded-lg 
                     w-[90%] sm:w-70 
                     cursor-pointer
                     transition-all duration-300 ease-out
@@ -85,7 +85,7 @@ export default function Projetos() {
               </div>
             </DialogTrigger>
 
-            <DialogContent className="dark:bg-[#374357] bg-[#acc2ef] dark:text-[#e0e0e0] border-0">
+            <DialogContent className="dark:bg-[#374357] bg-[#acc2ef] dark:text-[#e0e0e0] border-0 max-h-[90%] overflow-y-auto">
               <DialogHeader>
                 <DialogTitle>{projeto.name}</DialogTitle>
               </DialogHeader>

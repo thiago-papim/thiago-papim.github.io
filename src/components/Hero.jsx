@@ -6,6 +6,8 @@ import { TypingAnimation } from './ui/typing-animation'
 import fotoPerfil from '../assets/images/foto-perfil.png'
 import linkedIn from '../assets/images/linkedin.png'
 import gitHub from '../assets/images/github.png'
+import pdf from '../assets/images/pdf.png'
+import handleDownload from '@/utils/DownloadPdf'
 
 export default function Hero() {
   return (
@@ -41,6 +43,9 @@ export default function Hero() {
           >
             <img className="w-10" src={gitHub} alt="foto-perfil" />
           </a>
+          <button onClick={handleDownload} className="cursor-pointer">
+            <img className="w-10" src={pdf} alt="foto-perfil" />
+          </button>
         </div>
         <p className="font-montserrat text-md md:text-lg font-light lg:text-xl lg:text-left text-center dark:text-white lg:max-w-lg mt-10">
           Uma pessoa apaixonada por ajudar os outros, e acredito que a

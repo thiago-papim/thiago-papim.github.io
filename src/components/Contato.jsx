@@ -92,7 +92,7 @@ export default function Contato() {
 
       <Card
         className="max-w-200 w-[90%] border-none p-0 shadow-none 
-      bg-[#acc2ef] dark:bg-[#1f2b3e]"
+      bg-[#acc2ef] dark:bg-[#0F1C2E]"
       >
         <CardHeader className="border-border border-b p-4 [.border-b]:pb-4">
           <CardDescription className="dark:text-white text-black">

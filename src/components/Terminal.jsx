@@ -2,34 +2,86 @@ import { useState, useRef, useEffect } from 'react'
 
 const commands = {
   '/projetos': `
-Projetos:
+🚀 Projetos em Destaque:
 
-• Sistema de Engenharia com geração de PDF
-• Painel Administrativo com MUI
-• App Kotlin offline com Room
-• Sistema com upload e sincronização
+🖥️ Frontend:
+• Finanhome – Site institucional para empresa financeira
+• Bragi – Site estratégico para construtora
+• Energe Engenharia – Sistema completo com geração de PDF
+• Trybe Tunes – App de músicas interativo
+• Online Store – Loja online integrada à API do Mercado Livre
+• Trivia – Jogo com React + Redux
+• Recipes App – Aplicação completa de receitas
+
+⚙️ Backend:
+• Trybe Futebol Clube – API com TypeScript e Sequelize
+• Blogs API – Sistema CRUD com autenticação JWT
+• Store Manager – API RESTful de vendas
+• Trybe Smith – API CRUD com TypeScript
+• MySQL All for One – Desafios avançados SQL
+• MySQL One for All – Normalização de banco de dados
+
+📱 Mobile:
+• Energe Mobile – Aplicação offline com React Native
 `,
+
   '/habilidades': `
-Habilidades:
+💡 Habilidades Técnicas:
 
+🎨 Frontend:
 • React
-• Node.js
-• MySQL
-• Docker
-• Kotlin
-• Tailwind
-`,
-  '/sobre': `
-Thiago Nascimento
-Desenvolvedor Full Stack focado em sistemas inteligentes.
-`,
-  '/help': `
-Comandos disponíveis:
+• JavaScript
+• Tailwind CSS
+• Material UI
+• Bootstrap
+• Redux
+• Vite
 
-/projetos
-/habilidades
-/sobre
-/clear
+🛠 Backend:
+• Node.js
+• Express
+• TypeScript
+• Sequelize
+• JWT
+• MySQL
+
+📱 Mobile:
+• React Native
+• Expo
+• Expo Router
+• NativeWind
+• React Native Paper
+
+🧪 Testes:
+• Jest
+• Mocha
+• Chai
+• Cypress
+`,
+
+  '/sobre': `
+👋 Thiago Nascimento
+
+Desenvolvedor Full Stack apaixonado por tecnologia e por criar sistemas inteligentes.
+
+Experiência com:
+• Frontend moderno e responsivo
+• APIs seguras e performáticas
+• Banco de dados estruturado
+• Aplicações mobile offline
+• Geração de relatórios em PDF
+• Sistemas com sincronização de dados
+
+Foco em entregar soluções completas, escaláveis e estratégicas.
+`,
+
+  '/help': `
+📌 Comandos disponíveis:
+
+/projetos  → Lista meus principais projetos
+/habilidades → Tecnologias que utilizo
+/sobre → Sobre mim
+/clear → Limpar terminal
 `,
 }
 
@@ -66,8 +118,9 @@ export default function Terminal() {
   }
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
-      <div className="bg-[#0f172a] border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+    <div className="w-full lg:max-w-300 min-h-screen flex justify-center pt-30">
+      {' '}
+      <div className="bg-[#0f172a] border border-slate-800 rounded-2xl shadow-2xl overflow-hidden h-150 max-w-[90%] w-full">
         {/* Header estilo macOS */}
         <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-800">
           <div className="w-3 h-3 bg-red-500 rounded-full" />
@@ -79,7 +132,7 @@ export default function Terminal() {
         </div>
 
         {/* Corpo */}
-        <div className="p-6 h-[400px] overflow-y-auto font-mono text-sm text-slate-200">
+        <div className="p-6 h-100 overflow-y-auto font-mono text-sm text-slate-200">
           {history.map((item, index) => (
             <div key={index} className="mb-2">
               {item.type === 'input' && (
